@@ -1,0 +1,9 @@
+#Mac folder metadata
+.DS_Store
+pyq/.DS_Store
+pdfs/.DS_Store
+qa/.DS_Store
+notes/.DS_Store
+
+#env
+.env
