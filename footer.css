@@ -1,0 +1,129 @@
+/* ==========================================================
+   Shared site footer — link this file on every page:
+   <link rel="stylesheet" href="/footer.css">
+   ========================================================== */
+
+.hint {
+    text-align: center;
+    color: #838a99;
+    font-size: 12.5px;
+    margin: 40px 0 0;
+    font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+}
+
+.logo {
+    display: block;
+    height: auto;
+}
+
+.logo-footer {
+    width: 100px;
+    max-width: 100%;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    width: min(1100px, calc(100% - 40px));
+    margin: 30px auto 0;
+    padding: 30px 0 10px;
+
+    border-top: 1px solid #2a2e37;
+}
+
+/* Push the second contributor to the last column, so Feedback and
+   Guided By wrap onto their own row together (matches homepage footer) */
+.footer-item:nth-child(4) {
+    grid-column: 5;
+}
+
+.footer-item {
+    min-width: 0;
+}
+
+.footer-item span {
+    display: block;
+    margin-bottom: 7px;
+
+    font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #838a99;
+    font-size: 10px;
+}
+
+.footer-item strong {
+    display: block;
+    color: #d7dae0;
+    font-size: 13px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.footer-item-wide strong {
+    white-space: nowrap;
+    overflow-wrap: normal;
+}
+
+.footer-item a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #6fb3e0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.link-arrow {
+    display: inline-block;
+    font-size: 12px;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+}
+
+.footer-item a:hover {
+    color: #e0a75e;
+    transform: translateX(2px);
+}
+
+.footer-item a:hover .link-arrow {
+    transform: translate(2px, -2px);
+}
+
+.footer-item a:focus-visible {
+    outline: 2px solid #6fb3e0;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+.footer-item a[href^="mailto"] {
+    color: #d7dae0;
+    font-weight: 500;
+}
+
+.footer-item a[href^="mailto"]:hover {
+    color: #e0a75e;
+}
+
+@media (max-width: 750px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-item:nth-child(4) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
