@@ -1,0 +1,195 @@
+:root {
+    --bg: #16181d;
+    --panel: #1b1e24;
+    --border: #2a2e37;
+    --text: #d7dae0;
+    --muted: #838a99;
+
+    --accent: #e0a75e;
+    --accent-soft: #e0a75e33;
+
+    --blue: #6fb3e0;
+    --blue-soft: #6fb3e033;
+
+    --green: #7fd68a;
+    --green-soft: #7fd68a33;
+
+    --purple: #b18cd9;
+    --purple-soft: #b18cd933;
+
+    --mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    padding: 48px 20px 80px;
+    line-height: 1.5;
+}
+
+.wrap {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+header {
+    margin-bottom: 44px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+}
+
+.eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14.5px;
+}
+
+
+/* Units list */
+
+.units-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.unit-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 20px 22px;
+
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: var(--text);
+
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.unit-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+.unit-num {
+    flex-shrink: 0;
+
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-soft);
+
+    border-radius: 6px;
+    padding: 3px 8px;
+}
+
+.unit-info {
+    flex: 1;
+}
+
+.unit-info h2 {
+    margin: 0 0 4px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.unit-info p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--muted);
+}
+
+.arrow {
+    font-size: 20px;
+    color: var(--muted);
+    transition: color 0.15s ease;
+}
+
+.unit-card:hover .arrow {
+    color: var(--accent);
+}
+
+
+/* Per-unit accent, carried over from the old gradient scheme */
+
+.unit-1 .unit-num {
+    color: var(--blue);
+    background: var(--blue-soft);
+}
+
+.unit-1:hover {
+    border-color: var(--blue);
+}
+
+.unit-1:hover .arrow {
+    color: var(--blue);
+}
+
+.unit-3 .unit-num {
+    color: var(--green);
+    background: var(--green-soft);
+}
+
+.unit-3:hover {
+    border-color: var(--green);
+}
+
+.unit-3:hover .arrow {
+    color: var(--green);
+}
+
+.unit-4 .unit-num {
+    color: var(--purple);
+    background: var(--purple-soft);
+}
+
+.unit-4:hover {
+    border-color: var(--purple);
+}
+
+.unit-4:hover .arrow {
+    color: var(--purple);
+}
+
+
+/* Hint line above footer */
+
+.hint {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12.5px;
+    margin: 40px 0 0;
+    font-family: var(--mono);
+}
+
+

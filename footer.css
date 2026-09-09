@@ -1,8 +1,3 @@
-/* ==========================================================
-   Shared site footer — link this file on every page:
-   <link rel="stylesheet" href="/footer.css">
-   ========================================================== */
-
 .hint {
     text-align: center;
     color: #838a99;
@@ -33,8 +28,6 @@
     border-top: 1px solid #2a2e37;
 }
 
-/* Push the second contributor to the last column, so Feedback and
-   Guided By wrap onto their own row together (matches homepage footer) */
 .footer-item:nth-child(4) {
     grid-column: 5;
 }
